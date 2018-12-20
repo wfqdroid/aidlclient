@@ -1,0 +1,4 @@
+客户端使用AIDL步骤：
+    将AndroidStudio的目录切换成Project模式，将服务端的aidl文件复制一份拷贝到/src/main目录下面，跟java同级
+    然后在/java下面新建跟服务端实体类相同的文件夹和文件。将服务端的实体类拷贝过来
+    bindService的时候采用包名和action匹配的形式来绑定服务
