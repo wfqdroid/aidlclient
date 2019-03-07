@@ -2,6 +2,7 @@
 // IBookController.aidl
 package www.wfq.com.aidlserver.aidl;
 import www.wfq.com.aidlserver.aidl.Book;
+import www.wfq.com.aidlserver.aidl.IOnNewBookArrivedListener;
 
 interface IBookController {
 
@@ -13,5 +14,10 @@ interface IBookController {
     // out 表示数据只能由服务端流向客户端，
     // inout 则表示数据可在服务端与客户端之间双向流通
     void addBook(inout Book book);
+
+    void registerListener(IOnNewBookArrivedListener listener);
+
+    void unregisterListener(IOnNewBookArrivedListener listener);
+
 
 }
